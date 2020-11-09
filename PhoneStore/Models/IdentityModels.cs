@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using PhoneStore.Models.References;
 
 namespace PhoneStore.Models
 {
@@ -20,6 +21,14 @@ namespace PhoneStore.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Phone> Phone { get; set; }
+        public DbSet<Manufacturer> Manufacturer { get; set; }
+        public DbSet<Color> Color { get; set; }
+        public DbSet<Material> Material { get; set; }
+        public DbSet<Model> Model { get; set; }
+        public DbSet<OperatingSystem> OperatingSystem { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
