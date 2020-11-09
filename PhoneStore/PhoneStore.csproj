@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{289D3765-8EF2-4320-AA76-0ED8EFF7EB4C}</ProjectGuid>
+    <ProjectGuid>{B06EB026-F7F7-4452-9357-930638C22C95}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -173,13 +173,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011090554490_InitialMigration.cs" />
+    <Compile Include="Migrations\202011090554490_InitialMigration.Designer.cs">
+      <DependentUpon>202011090554490_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011090640230_AddClasses.cs" />
+    <Compile Include="Migrations\202011090640230_AddClasses.Designer.cs">
+      <DependentUpon>202011090640230_AddClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011090733361_PopualateManufacturerTable.cs" />
+    <Compile Include="Migrations\202011090733361_PopualateManufacturerTable.Designer.cs">
+      <DependentUpon>202011090733361_PopualateManufacturerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011090740322_AddClasses1.cs" />
+    <Compile Include="Migrations\202011090740322_AddClasses1.Designer.cs">
+      <DependentUpon>202011090740322_AddClasses1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011090742141_PopualateManufacturerTable1.cs" />
+    <Compile Include="Migrations\202011090742141_PopualateManufacturerTable1.Designer.cs">
+      <DependentUpon>202011090742141_PopualateManufacturerTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011090922571_PopulateOtherReferenceTables.cs" />
+    <Compile Include="Migrations\202011090922571_PopulateOtherReferenceTables.Designer.cs">
+      <DependentUpon>202011090922571_PopulateOtherReferenceTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Phone.cs" />
+    <Compile Include="Models\References\Color.cs" />
+    <Compile Include="Models\References\Material.cs" />
+    <Compile Include="Models\References\Model.cs" />
+    <Compile Include="Models\References\OperatingSystem.cs" />
+    <Compile Include="Models\References\Manufacturer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-dark.css" />
+    <Content Include="Content\bootstrap-lumen.css" />
+    <Content Include="Content\bootstrap-sketchy.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -252,6 +286,26 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011090554490_InitialMigration.resx">
+      <DependentUpon>202011090554490_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011090640230_AddClasses.resx">
+      <DependentUpon>202011090640230_AddClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011090733361_PopualateManufacturerTable.resx">
+      <DependentUpon>202011090733361_PopualateManufacturerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011090740322_AddClasses1.resx">
+      <DependentUpon>202011090740322_AddClasses1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011090742141_PopualateManufacturerTable1.resx">
+      <DependentUpon>202011090742141_PopualateManufacturerTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011090922571_PopulateOtherReferenceTables.resx">
+      <DependentUpon>202011090922571_PopulateOtherReferenceTables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -268,7 +322,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62443</DevelopmentServerPort>
+          <DevelopmentServerPort>55986</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44315/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
